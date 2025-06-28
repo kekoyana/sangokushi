@@ -47,5 +47,8 @@ describe('GameBoard', () => {
     // 13州が表示されることを確認
     const stateElements = screen.getAllByTestId(/state-/)
     expect(stateElements).toHaveLength(13)
+    
+    // 地図タイトルが表示されることを確認
+    expect(screen.getByText('中国地図')).toBeInTheDocument()
   })
 })
